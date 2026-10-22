@@ -1,0 +1,710 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Nasty Tips — Nail art & press-on nails par Jade</title>
+<meta name="description" content="Nasty Tips : nail art & press-on nails par Jade Logerot. Gainage, extensions, french, nail art custom. Réservation en ligne.">
+<meta name="theme-color" content="#e8322a">
+<link rel="icon" href="brand/icon-512.png">
+<meta property="og:title" content="Nasty Tips — Nail art & press-on nails">
+<meta property="og:image" content="brand/icon-512.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --red:#e8322a;--orange:#f27a2c;--amber:#f2a73b;--lime:#c6f23a;--cream:#fff4ea;--ink:#2a0d08;--white:#fff;
+  --grad:linear-gradient(160deg,var(--amber) 0%,var(--orange) 38%,var(--red) 100%);
+  --grad2:linear-gradient(200deg,var(--orange) 0%,var(--red) 70%);
+  --display:'Bagel Fat One',system-ui,sans-serif;--body:'Space Grotesk',system-ui,sans-serif;
+  --r:26px;--sh:0 14px 40px rgba(120,20,5,.22);--ease:cubic-bezier(.2,.8,.2,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);background:var(--cream);color:var(--ink);overflow-x:hidden;line-height:1.5;-webkit-font-smoothing:antialiased}
+body.lock{overflow:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer;border:0;background:none}
+.wrap{width:min(1200px,100% - 32px);margin-inline:auto}
+::selection{background:var(--lime);color:var(--ink)}
+
+/* film grain */
+.grain{position:relative;isolation:isolate}
+.grain::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:1;opacity:.45;mix-blend-mode:soft-light;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+.grain>*{position:relative;z-index:2}
+
+.disp{font-family:var(--display);letter-spacing:-.01em;line-height:.9}
+.star{display:inline-block;color:var(--lime);filter:drop-shadow(0 0 8px rgba(198,242,58,.6));animation:twinkle 2.6s ease-in-out infinite}
+@keyframes twinkle{0%,100%{transform:scale(1) rotate(0)}50%{transform:scale(1.25) rotate(20deg)}}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6em;padding:.95em 1.6em;border-radius:999px;font-weight:700;font-size:1rem;
+  background:var(--ink);color:#fff;box-shadow:var(--sh);transition:transform .2s var(--ease),box-shadow .2s;position:relative;overflow:hidden}
+.btn::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,transparent 30%,rgba(255,255,255,.35) 50%,transparent 70%);transform:translateX(-120%);transition:transform .6s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 18px 44px rgba(120,20,5,.3)}
+.btn:hover::after{transform:translateX(120%)}
+.btn.lime{background:var(--lime);color:var(--ink)}
+.btn.white{background:#fff;color:var(--red)}
+.btn.red{background:var(--red);color:#fff}
+.btn.ghost{background:transparent;border:2px solid currentColor;box-shadow:none}
+.btn svg{width:1.2em;height:1.2em;flex:none}
+
+/* ---------- INTRO ---------- */
+#intro{position:fixed;inset:0;z-index:999;background:var(--grad);display:grid;place-items:center;overflow:hidden;transition:opacity .8s var(--ease),visibility .8s,transform .8s var(--ease)}
+#intro.off{opacity:0;visibility:hidden;transform:scale(1.06)}
+#intro video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .5s}
+#intro video.ready{opacity:1}
+#intro .fb{position:relative;z-index:2;width:min(72vw,560px);text-align:center;transition:opacity .4s}
+#intro .fb.hide{opacity:0}
+#intro .fb img{width:100%;clip-path:inset(0 0 100% 0);animation:drip 1.6s cubic-bezier(.6,0,.2,1) .3s forwards}
+@keyframes drip{to{clip-path:inset(0 0 0 0)}}
+#intro .fb .spark{position:absolute;right:8%;top:38%;font-size:clamp(2rem,6vw,4rem);color:var(--lime);opacity:0;animation:pop .5s cubic-bezier(.3,1.6,.4,1) 1.9s forwards}
+@keyframes pop{from{transform:scale(0) rotate(-40deg)}to{opacity:1;transform:scale(1)}}
+#intro .fb p{color:#fff;font-weight:700;letter-spacing:.2em;font-size:.85rem;margin-top:22px;opacity:0;animation:fade .6s 2.3s forwards}
+@keyframes fade{to{opacity:1}}
+#intro .blob{position:absolute;border-radius:50%;background:#fff;opacity:.18;filter:blur(40px);animation:float 6s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-30px) scale(1.1)}}
+#skip{position:absolute;bottom:max(26px,env(safe-area-inset-bottom));right:26px;z-index:3;color:#fff;border:2px solid rgba(255,255,255,.7);border-radius:999px;padding:.5em 1.1em;font-weight:700;backdrop-filter:blur(6px)}
+#bar{position:absolute;left:0;bottom:0;height:4px;background:var(--lime);width:0;z-index:3;transition:width .2s linear}
+
+/* ---------- NAV ---------- */
+nav{position:fixed;top:14px;left:0;right:0;z-index:50;transition:top .3s}
+nav.small{top:8px}
+.nav-in{display:flex;align-items:center;justify-content:space-between;gap:16px;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);
+  border-radius:999px;padding:8px 8px 8px 12px;box-shadow:var(--sh);transition:padding .3s}
+nav.small .nav-in{padding:5px 6px 5px 10px}
+.logo{display:flex;align-items:center;gap:10px;font-family:var(--display);font-size:1.3rem;color:var(--red)}
+.logo img{height:44px;width:44px;border-radius:50%;transition:height .3s,width .3s}
+nav.small .logo img{height:36px;width:36px}
+.links{display:flex;gap:2px}
+.links a{padding:.55em 1em;border-radius:999px;font-weight:600;transition:background .2s,color .2s}
+.links a:hover{background:#ffe3d1}
+.links a.on{background:var(--ink);color:var(--lime)}
+.nav-cta{padding:.65em 1.2em;box-shadow:none}
+.burger{display:none;width:46px;height:46px;border-radius:50%;background:var(--ink);color:#fff;font-size:1.3rem}
+@media(max-width:900px){
+  .links{position:fixed;inset:84px 16px auto;flex-direction:column;background:#fff;border-radius:var(--r);padding:12px;box-shadow:var(--sh);
+    transform:translateY(-20px);opacity:0;pointer-events:none;transition:.25s}
+  .links.open{transform:none;opacity:1;pointer-events:auto}
+  .links a{font-size:1.2rem;padding:.8em 1em}
+  .nav-cta{display:none}.burger{display:block}
+}
+/* mobile sticky CTA */
+.mcta{display:none;position:fixed;left:12px;right:12px;bottom:max(12px,env(safe-area-inset-bottom));z-index:60;transform:translateY(120%);transition:transform .35s var(--ease)}
+.mcta.show{transform:none}
+.mcta .btn{width:100%;padding:1.05em;font-size:1.05rem}
+@media(max-width:900px){.mcta{display:block}}
+
+/* ---------- HERO ---------- */
+.hero{min-height:100svh;padding:120px 0 80px;background:var(--grad);color:#fff;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.tag{display:inline-flex;align-items:center;gap:.6em;background:rgba(255,255,255,.18);border:1.5px solid rgba(255,255,255,.6);border-radius:999px;padding:.4em 1.1em;font-weight:700;letter-spacing:.12em;font-size:.78rem;margin-bottom:26px;backdrop-filter:blur(4px)}
+.tag i{width:8px;height:8px;border-radius:50%;background:var(--lime);box-shadow:0 0 10px var(--lime);animation:blink 1.6s infinite}
+@keyframes blink{50%{opacity:.3}}
+.wordmark{width:min(100%,540px);filter:drop-shadow(0 12px 30px rgba(120,20,5,.3));opacity:0;transform:translateY(20px) scale(.96);transition:opacity .8s var(--ease) .1s,transform .8s var(--ease) .1s}
+body.in .wordmark{opacity:1;transform:none}
+.h-sub{font-size:clamp(1.1rem,2vw,1.35rem);max-width:34ch;margin:30px 0 32px;font-weight:500}
+.h-sub b{color:var(--lime)}
+.h-ctas{display:flex;flex-wrap:wrap;gap:14px}
+.h-meta{display:flex;gap:26px;margin-top:38px;font-size:.85rem;font-weight:600;opacity:.9;flex-wrap:wrap}
+.h-meta span::before{content:"✦ ";color:var(--lime)}
+.collage{position:relative;height:620px;transform-style:preserve-3d;perspective:1000px}
+.pola{position:absolute;background:#fff;border-radius:18px;padding:10px 10px 36px;box-shadow:0 24px 60px rgba(100,15,5,.35);overflow:hidden;will-change:transform}
+.pola img{width:100%;height:100%;object-fit:cover;border-radius:10px}
+.pola span{position:absolute;left:0;right:0;bottom:8px;text-align:center;font-family:var(--display);font-size:.95rem;color:var(--red)}
+.pola:nth-child(1){width:48%;height:58%;left:0;top:4%;--rot:-6deg;--d:7s;z-index:2}
+.pola:nth-child(2){width:50%;height:62%;right:0;top:0;--rot:5deg;--d:6s;z-index:3}
+.pola:nth-child(3){width:46%;height:54%;left:6%;bottom:0;--rot:4deg;--d:8s;z-index:4}
+.pola:nth-child(4){width:44%;height:50%;right:2%;bottom:3%;--rot:-7deg;--d:6.5s;z-index:1}
+.pola{transform:rotate(var(--rot)) translate(var(--px,0),var(--py,0));animation:bob var(--d) ease-in-out infinite}
+@keyframes bob{50%{margin-top:-12px}}
+.sticker{position:absolute;z-index:6;font-family:var(--display);background:var(--lime);color:var(--ink);border-radius:50%;
+  width:122px;height:122px;display:grid;place-items:center;text-align:center;font-size:.95rem;line-height:1.05;
+  box-shadow:var(--sh);top:42%;left:40%;animation:spin 18s linear infinite}
+@keyframes spin{to{rotate:360deg}}
+@media(max-width:900px){.hero{padding-top:104px}.hero .wrap{grid-template-columns:1fr}.collage{height:440px}.sticker{width:96px;height:96px;font-size:.8rem;left:auto;right:4%;top:-14px}.h-meta{gap:14px}}
+
+/* ---------- MARQUEE ---------- */
+.marquee{background:var(--ink);color:var(--lime);overflow:hidden;transform:rotate(-1.2deg);margin:-16px -10px 0;position:relative;z-index:5}
+.marquee.alt{background:var(--lime);color:var(--ink);transform:rotate(1.2deg);margin-top:-30px}
+.track{display:flex;width:max-content;animation:mq 26s linear infinite;font-family:var(--display);font-size:clamp(1.5rem,3.3vw,2.4rem);padding:.4em 0}
+.marquee:hover .track{animation-play-state:paused}
+.marquee.alt .track{animation-direction:reverse}
+.track span{padding:0 .6em;white-space:nowrap}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* ---------- SECTIONS ---------- */
+section{padding:100px 0;position:relative}
+.s-head{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:40px}
+.s-title{font-family:var(--display);font-size:clamp(2.6rem,7vw,5rem);line-height:.9}
+.s-kicker{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.2em;font-size:.75rem;text-transform:uppercase;margin-bottom:12px;opacity:.9}
+.s-kicker::before{content:"";width:28px;height:2px;background:currentColor;opacity:.6}
+.s-desc{max-width:46ch;font-size:1.08rem;font-weight:500}
+.count{font-family:var(--display);font-size:.95rem;background:rgba(255,255,255,.2);border:1.5px solid rgba(255,255,255,.5);border-radius:999px;padding:.3em .9em;vertical-align:middle;margin-left:.3em}
+.c-french .count,.c-nude .count{background:var(--cream);border-color:#f0d9cc;color:var(--red)}
+
+/* ---------- COLLECTIONS ---------- */
+.col{padding:80px 0}
+.col.c-art{background:var(--grad);color:#fff}
+.col.c-chrome{background:var(--ink);color:var(--cream)}
+.col.c-chrome .s-kicker{color:var(--lime)}
+.col.c-french{background:var(--cream)}
+.col.c-french .s-kicker,.col.c-nude .s-kicker{color:var(--red)}
+.col.c-nude{background:#fff}
+.row{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:18px}
+.card{border-radius:22px;overflow:hidden;position:relative;background:#fff;box-shadow:var(--sh);cursor:zoom-in;transition:transform .3s var(--ease);aspect-ratio:4/5}
+.card img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
+.card::before{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(42,13,8,.55),transparent 45%);opacity:0;transition:opacity .3s}
+.card:hover{transform:translateY(-6px) rotate(-.6deg)}
+.card:hover img{transform:scale(1.05)}
+.card:hover::before{opacity:1}
+.card .lbl{position:absolute;left:12px;bottom:12px;right:12px;color:#fff;font-weight:700;font-size:.95rem;transform:translateY(8px);opacity:0;transition:.3s var(--ease);text-shadow:0 2px 10px rgba(0,0,0,.4)}
+.card .lbl small{display:block;font-weight:500;opacity:.85;font-size:.78rem}
+.card:hover .lbl{transform:none;opacity:1}
+.card.wide{grid-row:span 2;aspect-ratio:auto;height:100%}
+@media(max-width:600px){
+  .row{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;padding:6px 4px 16px;margin:0 -16px;padding-inline:16px;scrollbar-width:none}
+  .row::-webkit-scrollbar{display:none}
+  .card{flex:0 0 76%;scroll-snap-align:start}
+  .card.wide{grid-row:auto;aspect-ratio:4/5;height:auto}
+  .card .lbl{opacity:1;transform:none}.card::before{opacity:1}
+  .hint{display:block!important}
+}
+.hint{display:none;font-size:.8rem;font-weight:700;opacity:.7;margin-top:-6px}
+
+/* ---------- NAIL MENU ---------- */
+.menu{background:var(--grad2);color:#fff}
+.menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
+.item{background:rgba(255,255,255,.1);border:1.5px solid rgba(255,255,255,.35);border-radius:var(--r);padding:26px;backdrop-filter:blur(6px);transition:background .25s,transform .25s var(--ease);display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:start;position:relative}
+.item:hover{background:rgba(255,255,255,.2);transform:translateY(-4px)}
+.item .num{font-family:var(--display);font-size:2.6rem;line-height:1;color:var(--lime)}
+.item h3{font-family:var(--display);font-size:1.5rem;letter-spacing:.02em;margin-bottom:6px;text-transform:uppercase}
+.item p{font-weight:500;opacity:.95}
+.item .arrow{display:block;margin-top:8px;font-weight:700;color:var(--lime)}
+.item .go{display:inline-flex;align-items:center;gap:.4em;margin-top:14px;font-weight:700;font-size:.9rem;border-bottom:2px solid rgba(255,255,255,.5);padding-bottom:2px;transition:border-color .2s}
+.item .go:hover{border-color:var(--lime)}
+.menu .tagline{margin-top:44px;font-family:var(--display);font-size:clamp(1.4rem,3vw,2rem);text-align:center}
+
+/* ---------- PRESS-ONS ---------- */
+.press{background:var(--cream);overflow:hidden}
+.press .wrap{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.fan{position:relative;aspect-ratio:1;width:100%;max-width:520px;margin:auto}
+.fan img{position:absolute;width:58%;aspect-ratio:4/5;object-fit:cover;border-radius:18px;box-shadow:0 24px 50px rgba(100,15,5,.3);border:6px solid #fff;transition:transform .5s var(--ease)}
+.fan img:nth-child(1){left:2%;top:10%;transform:rotate(-12deg)}
+.fan img:nth-child(2){left:22%;top:4%;transform:rotate(2deg);z-index:2}
+.fan img:nth-child(3){right:2%;top:14%;transform:rotate(14deg)}
+.fan:hover img:nth-child(1){transform:rotate(-18deg) translateX(-14px)}
+.fan:hover img:nth-child(3){transform:rotate(20deg) translateX(14px)}
+.fan .badge{position:absolute;bottom:4%;left:50%;translate:-50% 0;z-index:3;width:120px;filter:drop-shadow(0 10px 20px rgba(100,15,5,.3));animation:spin 22s linear infinite}
+.press ul{list-style:none;display:grid;gap:12px;margin:24px 0 30px;font-weight:500;font-size:1.08rem}
+.press li::before{content:"✦ ";color:var(--red)}
+@media(max-width:900px){.press .wrap{grid-template-columns:1fr}}
+
+/* ---------- ABOUT ---------- */
+.about{background:#fff}
+.about .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:center}
+.portrait{aspect-ratio:4/5;border-radius:200px 200px var(--r) var(--r);overflow:hidden;box-shadow:var(--sh);background:var(--grad);position:relative}
+.portrait img{width:100%;height:100%;object-fit:cover}
+.portrait .ph{position:absolute;inset:0;display:grid;place-items:center}
+.portrait .ph img{width:55%;height:auto}
+.about p{font-size:1.15rem;margin-bottom:18px;max-width:52ch}
+.about p b{color:var(--red)}
+.stats{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
+.stat{border-radius:20px;padding:14px 20px;background:var(--cream);box-shadow:var(--sh)}
+.stat b{font-family:var(--display);font-size:2rem;display:block;line-height:1;color:var(--red)}
+@media(max-width:900px){.about .wrap{grid-template-columns:1fr}.portrait{max-width:380px}}
+
+/* ---------- INSTA STRIP ---------- */
+.insta{padding:0;background:#fff}
+.insta a.strip{display:grid;grid-template-columns:repeat(6,1fr);gap:4px}
+.insta .strip img{aspect-ratio:1;object-fit:cover;width:100%;transition:transform .4s,filter .4s}
+.insta .strip:hover img{filter:brightness(.7)}
+.insta .strip img:hover{transform:scale(1.03);filter:none}
+.insta .strip span{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--display);color:#fff;font-size:clamp(1.4rem,4vw,3rem);text-shadow:0 4px 20px rgba(0,0,0,.4);pointer-events:none}
+.insta a.strip{position:relative}
+@media(max-width:600px){.insta a.strip{grid-template-columns:repeat(3,1fr)}}
+
+/* ---------- BOOKING ---------- */
+.booking{background:var(--grad);color:#fff;overflow:hidden}
+.bk{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:start}
+.bk-form{background:#fff;color:var(--ink);border-radius:var(--r);padding:30px;box-shadow:var(--sh)}
+.steps{display:flex;gap:8px;margin-bottom:22px;font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.steps span{flex:1;padding:8px 0;border-top:3px solid #f0d9cc;color:#b58a7a;transition:.3s}
+.steps span.on{border-color:var(--red);color:var(--red)}
+.bk-side{display:grid;gap:18px;position:sticky;top:100px}
+.recap{background:var(--ink);color:#fff;border-radius:var(--r);padding:24px;box-shadow:var(--sh)}
+.recap h3{font-family:var(--display);font-size:1.4rem;margin-bottom:12px;color:var(--lime)}
+.recap dl{display:grid;grid-template-columns:auto 1fr;gap:8px 14px;font-size:.95rem}
+.recap dt{opacity:.6;font-weight:600}
+.recap dd{font-weight:700}
+.recap dd:empty::before{content:"—";opacity:.4}
+.bk-tip{background:rgba(255,255,255,.14);border:1.5px solid rgba(255,255,255,.4);border-radius:var(--r);padding:22px;backdrop-filter:blur(6px)}
+.bk-tip h3{font-family:var(--display);font-size:1.4rem;margin-bottom:8px}
+.bk-tip ul{padding-left:1.2em;font-weight:500}
+.bk-alt{text-align:center;font-weight:600}
+.bk-alt a{text-decoration:underline;text-underline-offset:3px}
+.f-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.f-grid .full{grid-column:1/-1}
+label{display:block;font-weight:700;font-size:.85rem;margin-bottom:6px;letter-spacing:.04em}
+input,select,textarea{width:100%;border:2px solid #f0d9cc;border-radius:14px;padding:12px 14px;background:#fff;outline:0;transition:border-color .15s,box-shadow .15s}
+input:focus,select:focus,textarea:focus{border-color:var(--orange);box-shadow:0 0 0 4px rgba(242,122,44,.18)}
+textarea{min-height:90px;resize:vertical}
+.slots{display:flex;gap:8px;flex-wrap:wrap}
+.slots label{display:inline-flex;align-items:center;border:2px solid #f0d9cc;border-radius:999px;padding:.55em 1em;cursor:pointer;margin:0;font-weight:700;transition:.15s}
+.slots input{appearance:none;width:0;height:0;border:0;padding:0;margin:0}
+.slots label:has(input:checked){background:var(--lime);border-color:var(--lime)}
+.bk-form .btn{width:100%;margin-top:8px}
+.bk-ok{display:none;background:var(--lime);border-radius:16px;padding:18px;font-weight:700;margin-top:16px}
+.bk-ok.show{display:block}
+.bk-embed{border-radius:var(--r);overflow:hidden;background:#fff;box-shadow:var(--sh);display:none}
+.bk-embed iframe{width:100%;height:700px;border:0}
+.bk-embed.show{display:block}
+.bk.hidden{display:none}
+@media(max-width:900px){.steps{font-size:.66rem;letter-spacing:.05em}.bk{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr}.bk-side{position:static}}
+
+/* ---------- FAQ / CTA / FOOTER ---------- */
+.faq{background:var(--cream)}
+.faq-list{max-width:820px}
+details{border-radius:20px;margin-bottom:12px;background:#fff;box-shadow:var(--sh);overflow:hidden}
+summary{list-style:none;padding:20px 24px;font-weight:700;font-size:1.1rem;cursor:pointer;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:var(--display);font-size:1.7rem;line-height:.8;color:var(--red);transition:rotate .2s}
+details[open] summary::after{rotate:45deg}
+details p{padding:0 24px 22px;font-size:1.05rem}
+.cta{text-align:center;background:var(--grad2);color:#fff;overflow:hidden}
+.cta .big{font-family:var(--display);font-size:clamp(3rem,10vw,8rem);line-height:.88;margin-bottom:30px}
+.cta .big span{color:var(--lime)}
+.cta p{font-size:1.2rem;font-weight:500;margin:0 auto 34px;max-width:40ch}
+footer{background:var(--ink);color:var(--cream);padding:46px 0 calc(46px + 70px)}
+@media(min-width:901px){footer{padding-bottom:46px}}
+.f-in{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
+footer .logo{color:#fff}
+footer a:hover{color:var(--lime)}
+.f-links{display:flex;gap:20px;flex-wrap:wrap}
+
+/* ---------- LIGHTBOX ---------- */
+.lb{position:fixed;inset:0;background:rgba(42,13,8,.94);z-index:200;display:none;place-items:center;padding:20px}
+.lb.open{display:grid}
+.lb-box{max-width:min(900px,100%);max-height:90vh;border-radius:22px;overflow:hidden;background:#fff;position:relative}
+.lb-box img{max-height:80vh;width:auto;margin:auto}
+.lb-cap{background:var(--lime);color:var(--ink);padding:12px 18px;font-weight:700;display:flex;justify-content:space-between;gap:12px}
+.lb-cap a{text-decoration:underline}
+.lb-x{position:absolute;top:18px;right:18px;width:52px;height:52px;border-radius:50%;background:var(--red);color:#fff;font-size:1.6rem}
+.lb-nav{position:absolute;top:50%;translate:0 -50%;width:52px;height:52px;border-radius:50%;background:#fff;color:var(--ink);font-size:1.6rem;font-weight:700}
+.lb-prev{left:14px}.lb-next{right:14px}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(36px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.rv.in{opacity:1;transform:none}
+.row .card.rv:nth-child(2){transition-delay:.06s}.row .card.rv:nth-child(3){transition-delay:.12s}.row .card.rv:nth-child(4){transition-delay:.18s}.row .card.rv:nth-child(5){transition-delay:.24s}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,.wordmark{opacity:1;transform:none}#intro{display:none}}
+</style>
+</head>
+<body>
+
+<!-- INTRO -->
+<div id="intro" class="grain">
+  <span class="blob" style="width:40vw;height:40vw;left:-10vw;top:-10vw"></span>
+  <span class="blob" style="width:30vw;height:30vw;right:-8vw;bottom:-8vw;animation-delay:-3s"></span>
+  <div class="fb" id="introFb">
+    <img src="brand/wordmark.png" alt="Nasty Tips">
+    <span class="spark">✦</span>
+    <p>NAIL ART &amp; PRESS-ON NAILS</p>
+  </div>
+  <button id="skip">Passer →</button>
+  <div id="bar"></div>
+</div>
+
+<nav id="nav">
+  <div class="wrap nav-in">
+    <a href="#top" class="logo"><img src="brand/logo-nt-256.png" alt="NT">Nasty Tips</a>
+    <div class="links" id="links">
+      <a href="#art">Travaux</a>
+      <a href="#menu">Nail menu</a>
+      <a href="#pressons">Press-ons</a>
+      <a href="#jade">Jade</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <a href="#reserver" class="btn red nav-cta">Réserver</a>
+    <button class="burger" id="burger" aria-label="Menu">☰</button>
+  </div>
+</nav>
+<div class="mcta" id="mcta"><a href="#reserver" class="btn red">Réserver en ligne ✦</a></div>
+
+<header class="hero grain" id="top">
+  <div class="wrap">
+    <div>
+      <span class="tag"><i></i>NAIL ART &amp; PRESS-ON NAILS</span>
+      <img class="wordmark" src="brand/wordmark.png" alt="Nasty Tips">
+      <p class="h-sub">Gainage, extensions, french clean ou nail art qui claque : des ongles posés avec une précision maniaque. <b>A little nasty never hurt.</b></p>
+      <div class="h-ctas">
+        <a href="#reserver" class="btn lime">Réserver en ligne
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a href="#art" class="btn white">Voir les sets</a>
+      </div>
+      <div class="h-meta"><span>Sur rendez-vous</span><span>Fait main</span><span>Sets custom &amp; press-ons</span></div>
+    </div>
+    <div class="collage" id="collage">
+      <div class="sticker">100%<br>fait<br>main ✦</div>
+    </div>
+  </div>
+</header>
+
+<div class="marquee"><div class="track" id="mq1"></div></div>
+
+<div id="collections"></div>
+
+<section class="menu grain" id="menu">
+  <div class="wrap">
+    <div class="s-head rv">
+      <div><span class="s-kicker">la carte</span><h2 class="s-title">Nail menu <span class="star">✦</span></h2></div>
+      <p class="s-desc">Tarifs communiqués à la réservation selon la pose et le design.</p>
+    </div>
+    <div class="menu-grid" id="menuGrid"></div>
+    <p class="tagline rv">✦ A LITTLE NASTY NEVER HURT.</p>
+  </div>
+</section>
+
+<div class="marquee alt"><div class="track" id="mq2"></div></div>
+
+<section class="press" id="pressons">
+  <div class="wrap">
+    <div class="fan rv" id="fan"><img src="brand/logo-nt.png" class="badge" alt="NT"></div>
+    <div class="rv">
+      <span class="s-kicker" style="color:var(--red)">nouveau</span>
+      <h2 class="s-title" style="margin-bottom:18px">Custom<br>press-ons</h2>
+      <p class="s-desc">Un set entièrement personnalisé, fait main par Jade, que tu poses toi-même en 10 minutes.</p>
+      <ul>
+        <li>Forme, longueur et design sur-mesure</li>
+        <li>À porter, retirer &amp; réutiliser</li>
+        <li>Idéal événement, voyage, ou envie de changer souvent</li>
+      </ul>
+      <a href="#reserver" class="btn red" data-svc="05 — Custom press-ons">Commander mon set</a>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="jade">
+  <div class="wrap">
+    <div class="portrait grain rv" id="portrait"><div class="ph"><img src="brand/wordmark.png" alt=""></div></div>
+    <div class="rv">
+      <span class="s-kicker" style="color:var(--red)">derrière les tips</span>
+      <h2 class="s-title" style="margin-bottom:26px">Salut, moi c'est Jade</h2>
+      <p>Derrière <b>Nasty Tips</b>, il y a Jade Logerot. Une french blanche parfaite un jour, un set chrome et strass le lendemain : chaque pose est pensée avec toi, pour toi.</p>
+      <p>Couleurs qui claquent, reliefs, motifs peints à la main, baby boomer ultra net : si tu peux l'imaginer, on peut le poser.</p>
+      <div class="stats" id="stats"></div>
+    </div>
+  </div>
+</section>
+
+<section class="insta">
+  <a class="strip js-insta" id="strip"><span>@nastytipss ✦ suivre</span></a>
+</section>
+
+<section class="booking grain" id="reserver">
+  <div class="wrap">
+    <div class="s-head rv">
+      <div><span class="s-kicker">en 2 minutes</span><h2 class="s-title">Réserver en ligne</h2></div>
+      <p class="s-desc">Choisis ta prestation, ta date et ton créneau. Jade confirme par message.</p>
+    </div>
+    <div class="bk-embed rv" id="bkEmbed"></div>
+    <div class="bk rv" id="bk">
+      <form class="bk-form" id="bkForm" novalidate>
+        <div class="steps"><span class="on">1 · Prestation</span><span>2 · Date</span><span>3 · Toi</span></div>
+        <div class="f-grid">
+          <div class="full"><label for="f-svc">Prestation</label><select id="f-svc" required></select></div>
+          <div><label for="f-date">Date souhaitée</label><input id="f-date" type="date" required></div>
+          <div><label for="f-alt">Autre date possible</label><input id="f-alt" type="date"></div>
+          <div class="full"><label>Créneau</label><div class="slots" id="slots"></div></div>
+          <div><label for="f-name">Prénom</label><input id="f-name" type="text" placeholder="Ton prénom" required autocomplete="given-name"></div>
+          <div><label for="f-tel">Téléphone</label><input id="f-tel" type="tel" placeholder="06 00 00 00 00" required autocomplete="tel"></div>
+          <div class="full"><label for="f-note">Inspo / précisions</label><textarea id="f-note" placeholder="Forme, longueur, couleur, lien Pinterest ou Insta…"></textarea></div>
+        </div>
+        <button class="btn red" type="submit" id="bkSubmit">Envoyer ma demande de RDV
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        <div class="bk-ok" id="bkOk">✅ Demande envoyée. Jade te répond vite pour confirmer le créneau.</div>
+      </form>
+      <div class="bk-side">
+        <div class="recap">
+          <h3>Ton récap ✦</h3>
+          <dl><dt>Prestation</dt><dd id="r-svc"></dd><dt>Date</dt><dd id="r-date"></dd><dt>Créneau</dt><dd id="r-slot"></dd><dt>Prénom</dt><dd id="r-name"></dd></dl>
+        </div>
+        <div class="bk-tip">
+          <h3>Avant de venir</h3>
+          <ul><li>Ongles propres, sans vernis si possible</li><li>Dépose extérieure ? Précise-le dans ta demande</li><li>Amène ton inspo, Jade adapte</li></ul>
+        </div>
+        <p class="bk-alt">Tu préfères écrire ? <a href="#" class="js-insta">DM @nastytipss</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="s-head rv"><div><span class="s-kicker" style="color:var(--red)">questions</span><h2 class="s-title">FAQ</h2></div></div>
+    <div class="faq-list" id="faqList"></div>
+  </div>
+</section>
+
+<section class="cta grain">
+  <div class="wrap rv">
+    <div class="big">STAY<br><span>NASTY.</span></div>
+    <p>Les créneaux partent vite. Réserve le tien maintenant.</p>
+    <a href="#reserver" class="btn lime">Prendre rendez-vous</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap f-in">
+    <a href="#top" class="logo"><img src="brand/logo-nt-256.png" alt="NT">Nasty Tips</a>
+    <div class="f-links">
+      <a href="#" class="js-insta">Instagram</a><a href="#art">Travaux</a><a href="#menu">Nail menu</a><a href="#reserver">Réserver</a>
+    </div>
+    <small id="copy"></small>
+  </div>
+</footer>
+
+<div class="lb" id="lb">
+  <button class="lb-x" id="lbX" aria-label="Fermer">✕</button>
+  <button class="lb-nav lb-prev" id="lbPrev" aria-label="Précédent">‹</button>
+  <button class="lb-nav lb-next" id="lbNext" aria-label="Suivant">›</button>
+  <div class="lb-box" id="lbBox"></div>
+</div>
+
+<script>
+/* ============================================================
+   CONFIG — tout se règle ici. Fichiers : /public/brand/… et /public/nails/…
+   ============================================================ */
+const CONFIG = {
+  instagram: "nastytipss",
+  portrait: "",                                   // ex: "brand/jade.jpg"
+
+  /* Intro : 2 vidéos Higgsfield, choisies selon l'orientation de l'écran.
+     once:true = 1 fois par session. Si un fichier manque → animation CSS. */
+  intro: { portrait:"brand/intro-portrait.mp4", landscape:"brand/intro-landscape.mp4", maxSeconds:7, once:true },
+
+  /* RÉSERVATION : embed (Planity/Calendly) > formspree (email) > whatsapp > email > sinon copie + Instagram */
+  booking: { embed:"", formspree:"", whatsapp:"", email:"",
+    slots:["Matin (9h–12h)","Après-midi (13h–17h)","Fin de journée (17h–20h)"], minDaysAhead:1 },
+
+  stats: [["100%","fait main"],["∞","designs"],["0","set identique"]],
+  marquee: ["NAIL ART","PRESS-ON NAILS","GAINAGE","EXTENSIONS","CLEAN & SIMPLE","CHROME","3D & RELIEF","STAY NASTY"],
+
+  hero: [
+    {src:"nails/01-hero-pool-turquoise.jpg", cap:"pool day"},
+    {src:"nails/02-hero-pool-stiletto.jpg",  cap:"sunset 3D"},
+    {src:"nails/03-hero-pool-pearl.jpg",     cap:"pearl chrome"},
+    {src:"nails/04-hero-lyon-teal.jpg",      cap:"teal glitter"}
+  ],
+  pressons: ["nails/06-patchwork-gold.jpg","nails/02-hero-pool-stiletto.jpg","nails/20-marble-green-chrome.jpg"],
+  instaStrip: ["nails/01-hero-pool-turquoise.jpg","nails/07-chrome-silver.jpg","nails/12-glitter-lime-dots.jpg","nails/15-french-burgundy.jpg","nails/04-hero-lyon-teal.jpg","nails/14-baby-boomer.jpg"],
+
+  collections: [
+    {id:"art", cls:"c-art", kicker:"la signature", title:"Nail art", svc:"04 — Nail art",
+     desc:"Motifs peints main, couleurs pop, reliefs. Les sets qu'on remarque de loin.",
+     works:[
+      {src:"nails/02-hero-pool-stiletto.jpg", title:"Sunset 3D & or", sub:"stiletto"},
+      {src:"nails/06-patchwork-gold.jpg",    title:"Patchwork terracotta", sub:"stiletto · or"},
+      {src:"nails/20-marble-green-chrome.jpg",title:"Marbre vert & chrome", sub:"amande"},
+      {src:"nails/05-leopard-zebra.jpg",     title:"Léopard x zèbre", sub:"carré long"},
+      {src:"nails/12-glitter-lime-dots.jpg", title:"Glitter & dots lime", sub:"stiletto"},
+      {src:"nails/11-red-lime-dots.jpg",     title:"Rouge cerise & lime", sub:"court"},
+      {src:"nails/01-hero-pool-turquoise.jpg",title:"Turquoise & strass", sub:"carré"}
+     ]},
+    {id:"chrome", cls:"c-chrome", kicker:"ça brille", title:"Chrome & glitter", svc:"04 — Nail art",
+     desc:"Miroir, paillettes, cat eye. Pour celles qui veulent capter la lumière.",
+     works:[
+      {src:"nails/08-editorial-teal.jpg",    title:"Série teal", sub:"éditorial", wide:true},
+      {src:"nails/04-hero-lyon-teal.jpg",    title:"Teal glitter", sub:"stiletto"},
+      {src:"nails/07-chrome-silver.jpg",     title:"Chrome argent", sub:"stiletto"},
+      {src:"nails/03-hero-pool-pearl.jpg",   title:"Pearl & contours", sub:"amande"},
+      {src:"nails/10-glitter-blue-almond.jpg",title:"Glitter bleu", sub:"amande"}
+     ]},
+    {id:"french", cls:"c-french", kicker:"clean & simple", title:"Les french", svc:"03 — Clean & Simple",
+     desc:"Blanche, bordeaux, chocolat, pailletée. Fine ou graphique, toujours nette.",
+     works:[
+      {src:"nails/17-french-white.jpg",       title:"French blanche", sub:"carré"},
+      {src:"nails/15-french-burgundy.jpg",    title:"French bordeaux", sub:"amande"},
+      {src:"nails/18-french-brown-gold.jpg",  title:"French chocolat & or", sub:"amande"},
+      {src:"nails/09-french-glitter-blue.jpg",title:"French glitter bleu", sub:"court"},
+      {src:"nails/16-french-white-watch.jpg", title:"French blanche", sub:"carré long"}
+     ]},
+    {id:"nude", cls:"c-nude", kicker:"clean girl", title:"Nude & baby boomer", svc:"01 — Gainage",
+     desc:"Dégradés rosés, nacré, naturel+. L'effet « ongles parfaits » sans en faire trop.",
+     works:[
+      {src:"nails/14-baby-boomer.jpg",   title:"Baby boomer", sub:"amande"},
+      {src:"nails/19-baby-boomer-2.jpg", title:"Baby boomer", sub:"amande long"},
+      {src:"nails/13-pearl-flowers.jpg", title:"Nacré & fleurs", sub:"carré court"}
+     ]}
+  ],
+
+  menu: [
+    {n:"01", name:"Gainage",          desc:"Renforcement de l'ongle naturel",             arrow:"Gel / couleur / nail art"},
+    {n:"02", name:"Extensions",       desc:"Pour gagner en longueur",                     arrow:"Forme au choix"},
+    {n:"03", name:"Clean & Simple",   desc:"French / couleur unie",                       arrow:""},
+    {n:"04", name:"Nail art",         desc:"Designs custom, chrome, 3D, relief, détails…", arrow:"À ajouter à ta pose"},
+    {n:"05", name:"Custom press-ons", desc:"Sets entièrement personnalisés",              arrow:"À porter, retirer & réutiliser"},
+    {n:"06", name:"Dépose",           desc:"Dépose de la pose existante",                 arrow:"Extérieure ou réalisée ici"}
+  ],
+  faq: [
+    ["Combien de temps tient une pose ?","3 à 4 semaines en moyenne, selon la pousse et l'entretien."],
+    ["Je peux venir avec mon inspo ?","Oui, c'est même conseillé. Mets le lien ou la description dans ta demande de RDV."],
+    ["C'est quoi un press-on custom ?","Un set fait main à tes mesures, que tu poses et retires toi-même. Réutilisable."],
+    ["Comment se passe la réservation ?","Tu envoies ta demande via le formulaire, Jade te confirme le créneau et le tarif par message."],
+    ["Et si j'ai un ongle cassé ?","Écris directement à Jade sur Instagram, elle te dira comment le rattraper."]
+  ]
+};
+
+/* ============================================================ */
+const $ = s=>document.querySelector(s), $$ = s=>[...document.querySelectorAll(s)];
+const insta = `https://instagram.com/${CONFIG.instagram}`;
+$$(".js-insta").forEach(a=>{a.href=insta;a.target="_blank";a.rel="noopener"});
+if(CONFIG.portrait) $("#portrait").innerHTML = `<img src="${CONFIG.portrait}" alt="Jade Logerot">`;
+
+/* ---------- intro ---------- */
+(()=>{
+  const I = $("#intro"), C = CONFIG.intro, body = document.body;
+  if(C.once && sessionStorage.getItem("nt-intro")){ I.remove(); body.classList.add("in"); return; }
+  body.classList.add("lock");
+  let done = false;
+  const end = ()=>{ if(done) return; done = true; I.classList.add("off"); body.classList.remove("lock"); body.classList.add("in");
+    sessionStorage.setItem("nt-intro","1"); setTimeout(()=>I.remove(),900); };
+  $("#skip").onclick = end;
+  const max = (C.maxSeconds||7)*1000, t0 = performance.now();
+  const tick = ()=>{ if(done) return; const p = Math.min(1,(performance.now()-t0)/max); $("#bar").style.width = (p*100)+"%"; if(p<1) requestAnimationFrame(tick); else end(); };
+  requestAnimationFrame(tick);
+  const src = matchMedia("(orientation:portrait)").matches ? C.portrait : C.landscape;
+  if(src){
+    const v = document.createElement("video");
+    Object.assign(v,{src,muted:true,playsInline:true,autoplay:true,preload:"auto"});
+    v.setAttribute("muted",""); v.setAttribute("playsinline","");
+    v.onended = end;
+    v.onplaying = ()=>{ v.classList.add("ready"); $("#introFb").classList.add("hide"); };
+    v.onerror = ()=>v.remove();
+    I.prepend(v); v.play().catch(()=>{});
+  }
+})();
+
+/* hero collage + parallax */
+$("#collage").insertAdjacentHTML("afterbegin", CONFIG.hero.map(h=>`<div class="pola"><img src="${h.src}" alt="${h.cap}"><span>${h.cap}</span></div>`).join(""));
+if(matchMedia("(hover:hover)").matches){
+  const polas = $$(".pola");
+  $(".hero").addEventListener("mousemove",e=>{
+    const x = (e.clientX/innerWidth-.5), y = (e.clientY/innerHeight-.5);
+    polas.forEach((p,i)=>{ const k = (i+1)*6; p.style.setProperty("--px",(x*k)+"px"); p.style.setProperty("--py",(y*k)+"px"); });
+  });
+}
+
+/* marquee */
+const mqTxt = CONFIG.marquee.map(t=>`<span>${t}</span><span>✦</span>`).join("");
+$("#mq1").innerHTML = mqTxt+mqTxt; $("#mq2").innerHTML = mqTxt+mqTxt;
+
+/* collections */
+const ALL = [];
+$("#collections").innerHTML = CONFIG.collections.map(c=>{
+  const cards = c.works.map(w=>{
+    const i = ALL.push({...w, coll:c.title, svc:c.svc})-1;
+    return `<div class="card rv${w.wide?" wide":""}" data-i="${i}"><img src="${w.src}" alt="${w.title}" loading="lazy"><span class="lbl">${w.title}<small>${w.sub||""}</small></span></div>`;
+  }).join("");
+  return `<section class="col ${c.cls} grain" id="${c.id}"><div class="wrap">
+    <div class="s-head rv"><div><span class="s-kicker">${c.kicker}</span><h2 class="s-title">${c.title} <span class="count">${c.works.length} sets</span></h2></div><p class="s-desc">${c.desc}</p></div>
+    <div class="row">${cards}</div><p class="hint">← glisse pour voir les sets</p></div></section>`;
+}).join("");
+
+/* press-ons fan + insta strip */
+$("#fan").insertAdjacentHTML("afterbegin", CONFIG.pressons.map(s=>`<img src="${s}" alt="" loading="lazy">`).join(""));
+$("#strip").insertAdjacentHTML("afterbegin", CONFIG.instaStrip.map(s=>`<img src="${s}" alt="" loading="lazy">`).join(""));
+
+/* menu / stats / faq */
+$("#menuGrid").innerHTML = CONFIG.menu.map(m=>`<div class="item rv"><div class="num">${m.n}</div><div><h3>${m.name}</h3><p>${m.desc}</p>${m.arrow?`<span class="arrow">→ ${m.arrow}</span>`:""}<a href="#reserver" class="go" data-svc="${m.n} — ${m.name}">Réserver ✦</a></div></div>`).join("");
+$("#stats").innerHTML = CONFIG.stats.map(([b,t])=>`<div class="stat"><b>${b}</b>${t}</div>`).join("");
+$("#faqList").innerHTML = CONFIG.faq.map(([q,a])=>`<details class="rv"><summary>${q}</summary><p>${a}</p></details>`).join("");
+$("#copy").textContent = `© ${new Date().getFullYear()} Nasty Tips — Jade Logerot`;
+
+/* lightbox */
+let cur = 0;
+const closeLb = ()=>$("#lb").classList.remove("open");
+const showLb = i=>{
+  cur = (i+ALL.length)%ALL.length; const w = ALL[cur];
+  $("#lbBox").innerHTML = `<img src="${w.src}" alt="${w.title}"><div class="lb-cap"><span>${w.title} · ${w.coll}</span><a href="#reserver" id="lbBook">Je veux ça →</a></div>`;
+  $("#lb").classList.add("open");
+  $("#lbBook").onclick = ()=>{ closeLb(); setSvc(w.svc); $("#f-note").value = `Inspo : ${w.title} (${w.coll})`; };
+};
+document.addEventListener("click",e=>{ const c = e.target.closest(".card"); if(c) showLb(+c.dataset.i); });
+$("#lbX").onclick = closeLb; $("#lb").onclick = e=>{ if(e.target.id==="lb") closeLb(); };
+$("#lbPrev").onclick = ()=>showLb(cur-1); $("#lbNext").onclick = ()=>showLb(cur+1);
+addEventListener("keydown",e=>{ if(e.key==="Escape") closeLb(); if(e.key==="ArrowLeft") showLb(cur-1); if(e.key==="ArrowRight") showLb(cur+1); });
+
+/* nav : menu mobile, shrink, section active, sticky CTA mobile */
+$("#burger").onclick = ()=>$("#links").classList.toggle("open");
+$("#links").addEventListener("click",()=>$("#links").classList.remove("open"));
+const navLinks = $$("#links a"), secs = navLinks.map(a=>$(a.getAttribute("href"))).filter(Boolean);
+addEventListener("scroll",()=>{
+  $("#nav").classList.toggle("small", scrollY>80);
+  const y = scrollY+140; let on = null;
+  secs.forEach(s=>{ if(s.offsetTop<=y) on = s.id; });
+  navLinks.forEach(a=>a.classList.toggle("on", a.getAttribute("href")==="#"+on));
+  const book = $("#reserver").getBoundingClientRect();
+  $("#mcta").classList.toggle("show", scrollY>innerHeight*.6 && (book.top>innerHeight || book.bottom<0));
+},{passive:true});
+
+/* ---------- booking ---------- */
+const B = CONFIG.booking;
+const setSvc = v=>{ const s = $("#f-svc"); if(s && [...s.options].some(o=>o.value===v)){ s.value = v; recap(); } };
+function recap(){
+  $("#r-svc").textContent = $("#f-svc").value.replace(/^\d+ — /,"");
+  $("#r-date").textContent = fmt($("#f-date").value) + (fmt($("#f-alt").value)?` ou ${fmt($("#f-alt").value)}`:"");
+  $("#r-slot").textContent = $("#bkForm").slot?.value || "";
+  $("#r-name").textContent = $("#f-name").value.trim();
+  const st = $$(".steps span"); st[1].classList.toggle("on", !!$("#f-date").value); st[2].classList.toggle("on", !!$("#f-name").value.trim());
+}
+const fmt = d => d ? new Date(d).toLocaleDateString("fr-FR",{weekday:"short",day:"numeric",month:"short"}) : "";
+if(B.embed){
+  $("#bkEmbed").innerHTML = `<iframe src="${B.embed}" title="Réservation" loading="lazy"></iframe>`;
+  $("#bkEmbed").classList.add("show"); $("#bk").classList.add("hidden");
+}else{
+  $("#f-svc").innerHTML = CONFIG.menu.map(m=>`<option>${m.n} — ${m.name}</option>`).join("");
+  $("#slots").innerHTML = B.slots.map((s,i)=>`<label><input type="radio" name="slot" value="${s}"${i?"":" checked"}>${s}</label>`).join("");
+  const min = new Date(); min.setDate(min.getDate()+(B.minDaysAhead||0));
+  const iso = min.toISOString().slice(0,10); $("#f-date").min = iso; $("#f-alt").min = iso;
+  $$("[data-svc]").forEach(a=>a.addEventListener("click",()=>setSvc(a.dataset.svc)));
+  $("#bkForm").addEventListener("input",recap); $("#bkForm").addEventListener("change",recap); recap();
+
+  $("#bkForm").addEventListener("submit", async e=>{
+    e.preventDefault();
+    const f = e.target; if(!f.reportValidity()) return;
+    const full = d => d ? new Date(d).toLocaleDateString("fr-FR",{weekday:"long",day:"numeric",month:"long"}) : "";
+    const d = { prestation:$("#f-svc").value, date:full($("#f-date").value), alt:full($("#f-alt").value),
+      creneau:f.slot.value, prenom:$("#f-name").value.trim(), tel:$("#f-tel").value.trim(), note:$("#f-note").value.trim() };
+    const msg = `Hello Jade ! Demande de RDV Nasty Tips\n• Prestation : ${d.prestation}\n• Date : ${d.date}${d.alt?` (ou ${d.alt})`:""}\n• Créneau : ${d.creneau}\n• Prénom : ${d.prenom}\n• Tél : ${d.tel}${d.note?`\n• Inspo : ${d.note}`:""}`;
+    const btn = $("#bkSubmit"), ok = $("#bkOk"); btn.disabled = true;
+    if(B.formspree){
+      try{
+        const r = await fetch(B.formspree,{method:"POST",headers:{"Accept":"application/json","Content-Type":"application/json"},body:JSON.stringify({...d,_subject:`RDV ${d.prenom} — ${d.prestation} — ${d.date}`})});
+        if(!r.ok) throw 0; ok.classList.add("show"); f.reset(); $("#slots input").checked = true; recap();
+      }catch{ alert("Envoi impossible. Écris directement à Jade sur Instagram."); }
+    }else if(B.whatsapp){
+      open(`https://wa.me/${B.whatsapp}?text=${encodeURIComponent(msg)}`,"_blank");
+      ok.textContent = "📲 WhatsApp s'ouvre avec ta demande préremplie. Envoie-la et Jade confirme."; ok.classList.add("show");
+    }else if(B.email){
+      location.href = `mailto:${B.email}?subject=${encodeURIComponent(`RDV — ${d.prestation} — ${d.date}`)}&body=${encodeURIComponent(msg)}`;
+      ok.textContent = "✉️ Ton client mail s'ouvre avec la demande préremplie."; ok.classList.add("show");
+    }else{
+      try{ await navigator.clipboard.writeText(msg); }catch{}
+      open(insta,"_blank");
+      ok.textContent = "📋 Ta demande est copiée. Colle-la en DM à @nastytipss (Instagram s'ouvre)."; ok.classList.add("show");
+    }
+    btn.disabled = false;
+  });
+}
+
+/* reveal */
+const io = new IntersectionObserver(es=>es.forEach(en=>{ if(en.isIntersecting){en.target.classList.add("in");io.unobserve(en.target);} }),{threshold:.1});
+$$(".rv").forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
